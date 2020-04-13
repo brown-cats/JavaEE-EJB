@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>查询页面</title>
+</h:head>
+<h:body>
+	<h:form id = "readData">
+		<h:panelGrid columns="2">
+			<h:outputLabel value="访问数据库" ></h:outputLabel><br></br><br></br>
+			<h:outputLabel value="数据库查询"></h:outputLabel><br></br>
+			<h:outputLabel value="学号:"></h:outputLabel><br></br>
+			<h:inputText id = "id" value = "#{processBean.id}" ></h:inputText><br></br>		
+			<h:outputLabel value="姓名:"></h:outputLabel><br></br>
+			<h:inputText id = "name" value = "#{processBean.name}"></h:inputText><br></br>
+			<h:commandButton id = "submit" action="#{processBean.readData()}" value="查询" 
+		                 >
+		</h:commandButton><br></br>		
+		</h:panelGrid>		
+	</h:form>
+</h:body>
+</html>

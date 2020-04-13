@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>查询结果</title>
+</h:head>
+<body>
+	  <h:form>
+        	<h:dataTable value="#{processBean.rs}" var="st">
+		<h:column id="column1">
+			<f:facet name="header">
+				<h:outputText value="学号"></h:outputText>
+			</f:facet>
+			<h:outputText value="#{st.id}"></h:outputText>
+		</h:column>
+		<h:column id="column2">
+			<f:facet name="header">
+				<h:outputText value="姓名"></h:outputText>
+			</f:facet>
+			<h:outputText value="#{st.name}"></h:outputText>
+		</h:column>
+		<h:column id="column3">
+			<f:facet name="header">
+				<h:outputText value="性别"></h:outputText>
+			</f:facet>
+			<h:outputText value="#{st.gender}"></h:outputText>
+		</h:column>
+		<h:column id="column4">
+			<f:facet name="header">
+				<h:outputText value="专业"></h:outputText>
+			</f:facet>
+			<h:outputText value="#{st.major}"></h:outputText>
+		</h:column>
+		<h:column id="column5">
+			<f:facet name="header">
+				<h:outputText value="地址编号"></h:outputText>
+			</f:facet>
+			<h:outputText value="#{st.address_id}"></h:outputText>
+		</h:column>
+	</h:dataTable>
+    </h:form>
+</body>
+</html>
